@@ -378,9 +378,9 @@ spec:
               optional: true
         {{- if .RunServiceProxy }}
         - name: KUBERNETES_SERVICE_HOST
-          value: {{.APIHost}}
+          value: "{{.APIHost}}"
         - name: KUBERNETES_SERVICE_PORT
-          value: {{.APIPort}}
+          value: "{{.APIPort}}"
         {{- end }}
         image: "{{.Image}}"
         imagePullPolicy: IfNotPresent
@@ -628,9 +628,9 @@ spec:
               optional: true
         {{- if .RunServiceProxy }}
         - name: KUBERNETES_SERVICE_HOST
-          value: {{.APIHost}}
+          value: "{{.APIHost}}"
         - name: KUBERNETES_SERVICE_PORT
-          value: {{.APIPort}}
+          value: "{{.APIPort}}"
         {{- end }}
         image: "{{.OperatorImage}}"
         imagePullPolicy: IfNotPresent
