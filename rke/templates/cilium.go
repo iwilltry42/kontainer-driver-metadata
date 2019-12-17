@@ -376,12 +376,12 @@ spec:
               key: custom-cni-conf
               name: cilium-config
 							optional: true
-{{- if .RunServiceProxy }}
+				{{- if .RunServiceProxy }}
 				- name: KUBERNETES_SERVICE_HOST
 					value: {{.APIHost}}
 				- name: KUBERNETES_SERVICE_PORT
 					value: {{.APIPort}}
-{{- end }}
+				{{- end }}
         image: "{{.Image}}"
         imagePullPolicy: IfNotPresent
         lifecycle:
@@ -626,12 +626,12 @@ spec:
               key: identity-allocation-mode
               name: cilium-config
 							optional: true
-{{- if .RunServiceProxy }}
+				{{- if .RunServiceProxy }}
 				- name: KUBERNETES_SERVICE_HOST
 					value: {{.APIHost}}
 				- name: KUBERNETES_SERVICE_PORT
 					value: {{.APIPort}}
-{{- end }}
+				{{- end }}
         image: "{{.OperatorImage}}"
         imagePullPolicy: IfNotPresent
         name: cilium-operator
